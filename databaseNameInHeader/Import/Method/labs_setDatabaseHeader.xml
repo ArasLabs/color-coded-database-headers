@@ -1,0 +1,34 @@
+﻿<AML>
+ <Item type="Method" id="BE220F6897784F94A7A37E57B15B1FE2" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[var DevDB = "_dev"
+var QaDB = "_qa"
+var ProbDB = "_prod"
+
+
+if(aras.getDatabase().toLowerCase().indexOf(DevDB.toLowerCase()) != -1) {
+    return {
+        "type" : "text",
+        "label" : aras.getDatabase(),
+        "cssClass" : "aras-toolbar__title",
+        "cssStyle" : "font-size: 12pt; font-weight: bold; color: red;"
+    }
+} else if(aras.getDatabase().toLowerCase().indexOf(QaDB.toLowerCase()) != -1) {
+    return {
+        "type" : "text",
+        "label" : aras.getDatabase(),
+        "cssClass" : "aras-toolbar__title",
+        "cssStyle" : "font-size: 12pt; font-weight: bold; color: green;"
+    }
+} else if(aras.getDatabase().toLowerCase().indexOf(ProbDB.toLowerCase()) != -1) {
+     return {
+        "type" : "text",
+        "label" : aras.getDatabase(),
+        "cssClass" : "aras-toolbar__title",
+        "cssStyle" : "font-size: 12pt; font-weight: bold; color: blue;"
+    }
+}]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>labs_setDatabaseHeader</name>
+ </Item>
+</AML>
