@@ -1,8 +1,8 @@
 # Color Coded Database Headers
-Uses CUI to add color coded database name to the header bar according to the database that is being accessed with the following appended to the name:
+Uses CUI to add color coded database name to the header bar according to the database that is being accessed if the following is appended to the end of the name:
 
-"_dev"
-"_qa"
+"_dev",
+"_qa",
 "_prod"
 
 ## History
