@@ -3,7 +3,7 @@ Uses CUI to add color coded database name to the header bar according to the dat
 
 "_dev",
 "_qa",
-"_prod"
+or "_prod"
 
 ## History
 
