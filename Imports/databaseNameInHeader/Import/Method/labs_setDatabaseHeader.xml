@@ -27,7 +27,14 @@ if(aras.getDatabase().toLowerCase().indexOf(DevDB.toLowerCase()) != -1) {
         "cssClass" : "aras-toolbar__title",
         "cssStyle" : "font-size: 12pt; font-weight: bold; color: blue;"
     }
-}]]></method_code>
+} else if(aras.getDatabase().toLowerCase().indexOf(DevDB.toLowerCase()) == -1 || aras.getDatabase().toLowerCase().indexOf(QaDB.toLowerCase()) == -1 || aras.getDatabase().toLowerCase().indexOf(ProbDB.toLowerCase()) == -1) {
+    return {
+        "type" : "text",
+        "label" : aras.getDatabase(),
+        "cssClass" : "aras-toolbar__title",
+        "cssStyle" : "font-size: 12pt; font-weight: bold;"
+    }
+} ]]></method_code>
   <method_type>JavaScript</method_type>
   <name>labs_setDatabaseHeader</name>
  </Item>
